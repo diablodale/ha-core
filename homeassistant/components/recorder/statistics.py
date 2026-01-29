@@ -43,6 +43,7 @@ from homeassistant.util import dt as dt_util
 from homeassistant.util.collection import chunked_or_all
 from homeassistant.util.enum import try_parse_enum
 from homeassistant.util.unit_conversion import (
+    AmmoniaConcentrationConverter,
     ApparentPowerConverter,
     AreaConverter,
     BaseUnitConverter,
@@ -227,6 +228,7 @@ _PRIMARY_UNIT_CONVERTERS: list[type[BaseUnitConverter]] = [
 ]
 
 _SECONDARY_UNIT_CONVERTERS: list[type[BaseUnitConverter]] = [
+    AmmoniaConcentrationConverter,
     CarbonMonoxideConcentrationConverter,
     NitrogenDioxideConcentrationConverter,
     NitrogenMonoxideConcentrationConverter,
